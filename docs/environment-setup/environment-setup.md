@@ -500,23 +500,14 @@ The Sysmon Operational log was verified through Windows Event Viewer.
 
 
 
-\## 12. Current Logging Architecture
+## 12. Current Logging Architecture
 
+```mermaid
+flowchart LR
 
+DC01["DC01<br>Domain Controller"] --> UF["Splunk Universal Forwarder"]
+WS01["WS01<br>Windows 11"] --> UF
+WS02["WS02<br>Windows 11"] --> UF
 
-The planned logging flow is:
-
-
-
-```text
-
-DC01 ──┐
-
-&#x20;      │
-
-WS01 ──┼── Splunk Universal Forwarder ──> SPLUNK
-
-&#x20;      │
-
-WS02 ──┘
-
+UF --> SPLUNK["Splunk Enterprise"]
+```
