@@ -28,7 +28,7 @@ The objective is to build a realistic corporate network, deploy centralized secu
 - [x] Create users, groups and organizational units
 - [x] Join workstations to the domain
 - [x] Install Sysmon
-- [ ] Deploy Splunk Enterprise
+- [x] Deploy Splunk Enterprise
 - [ ] Configure centralized logging
 - [ ] Simulate enterprise attack scenarios
 - [ ] Build detection rules
