@@ -30,11 +30,11 @@ The objective is to build a realistic corporate network, deploy centralized secu
 - [x] Install Sysmon
 - [x] Deploy Splunk Enterprise
 - [x] Configure centralized logging
-- [ ] Simulate enterprise attack scenarios
-- [ ] Build detection rules
-- [ ] Investigate incidents
-- [ ] Harden the environment using Group Policy
-- [ ] Complete final security assessment
+- [x] Harden the environment using Group Policy
+- [x] Build detection rules and dashboards
+- [x] Validate detections through simulated activity
+- [x] Investigate security events using Splunk
+- [ ] Publish documentation and final security assessment
 
 ---
 
