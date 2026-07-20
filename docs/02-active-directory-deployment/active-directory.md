@@ -23,19 +23,12 @@ The Active Directory environment forms the foundation of the enterprise network 
 
 
 | Component | Technology |
-
 |---|---|
-
 | Operating System | Windows Server 2016 |
-
 | Directory Service | Active Directory Domain Services (AD DS) |
-
 | DNS | Microsoft DNS |
-
 | Domain Functional Level | Windows Server 2016 |
-
 | Client Operating System | Windows 11 |
-
 | Management Tools | Server Manager, Active Directory Users and Computers, Group Policy Management |
 
 
@@ -49,19 +42,12 @@ The Active Directory environment forms the foundation of the enterprise network 
 
 
 | Setting | Value |
-
 |---|---|
-
 | Organisation | NorthBridge Technologies |
-
 | Active Directory Domain | corp.northbridge.com |
-
 | NetBIOS Name | CORP |
-
 | Domain Controller | DC01 |
-
 | DNS Server | DC01 |
-
 | DNS Address | 192.168.126.10 |
 
 
@@ -137,15 +123,10 @@ Windows endpoints were joined to the Active Directory domain and placed within t
 
 
 | Computer | Status |
-
 |---|---|
-
 | DC01 | Domain Controller |
-
 | WS01 | Domain Joined |
-
 | WS02 | Domain Joined |
-
 
 
 This allows centralized authentication, policy management, and administrative control across all Windows systems.
