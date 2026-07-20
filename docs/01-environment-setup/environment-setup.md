@@ -4,7 +4,7 @@
 
 This project documents the design, deployment, monitoring, testing, and continuous improvement of a simulated enterprise environment for a fictional company named **NorthBridge Technologies**.
 
-The objective is to build a realistic Windows enterprise environment that demonstrates secure infrastructure deployment, centralized management, security monitoring, attack simulation, detection engineering, and incident investigation.
+The objective is to build a realistic Windows enterprise environment that demonstrates secure infrastructure deployment, centralized management, security monitoring, detection engineering, and incident investigation, while providing a foundation for future attack simulation and detection validation.
 
 The environment is hosted locally using VMware Workstation 17 Player.
 
