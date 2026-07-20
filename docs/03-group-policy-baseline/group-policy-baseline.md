@@ -1,8 +1,8 @@
-\# 03 - Group Policy Security Baseline
+# 03 - Group Policy Security Baseline
 
 
 
-\## 1. Objective
+## 1. Objective
 
 
 
@@ -14,33 +14,28 @@ The implemented policies provide the foundation for centralized security managem
 
 
 
-\---
+---
 
 
 
-\## 2. Technologies Used
+## 2. Technologies Used
 
 
 
 | Component | Technology |
-
 |---|---|
-
 | Operating System | Windows Server 2016 |
-
 | Directory Service | Active Directory Domain Services |
-
 | Policy Management | Group Policy Management Console (GPMC) |
-
 | Target Systems | Windows 11 Domain-Joined Workstations |
 
 
 
-\---
+---
 
 
 
-\## 3. Group Policy Deployment
+## 3. Group Policy Deployment
 
 
 
@@ -52,11 +47,11 @@ The policy is automatically applied to all domain-joined systems, allowing secur
 
 
 
-\---
+---
 
 
 
-\## 4. Password Policy
+## 4. Password Policy
 
 
 
@@ -65,19 +60,12 @@ To strengthen authentication security, the following password policies were conf
 
 
 | Policy | Configuration |
-
 |---|---|
-
 | Enforce Password History | 24 Passwords |
-
 | Maximum Password Age | 90 Days |
-
 | Minimum Password Age | 1 Day |
-
 | Minimum Password Length | 14 Characters |
-
 | Password Complexity | Enabled |
-
 | Store Passwords Using Reversible Encryption | Disabled |
 
 
@@ -86,11 +74,11 @@ These settings help reduce weak passwords, password reuse, and unauthorized acce
 
 
 
-\---
+---
 
 
 
-\## 5. Account Lockout Policy
+## 5. Account Lockout Policy
 
 
 
@@ -99,13 +87,9 @@ To reduce the effectiveness of brute-force and password spraying attacks, accoun
 
 
 | Policy | Configuration |
-
 |---|---|
-
 | Account Lockout Threshold | 5 Invalid Logon Attempts |
-
 | Account Lockout Duration | 15 Minutes |
-
 | Reset Account Lockout Counter | 15 Minutes |
 
 
@@ -114,11 +98,11 @@ This configuration balances security with usability by temporarily locking accou
 
 
 
-\---
+---
 
 
 
-\## 6. Advanced Audit Policy
+## 6. Advanced Audit Policy
 
 
 
@@ -130,23 +114,23 @@ The following audit categories were configured:
 
 
 
-\- Account Logon
+- Account Logon
 
-\- Logon and Logoff
+- Logon and Logoff
 
-\- Account Management
+- Account Management
 
-\- Detailed Tracking
+- Detailed Tracking
 
-\- Directory Service Access
+- Directory Service Access
 
-\- Object Access
+- Object Access
 
-\- Policy Change
+- Policy Change
 
-\- Privilege Use
+- Privilege Use
 
-\- System Events
+- System Events
 
 
 
@@ -154,11 +138,11 @@ These policies ensure that important security events are written to the Windows 
 
 
 
-\---
+---
 
 
 
-\## 7. PowerShell Logging
+## 7. PowerShell Logging
 
 
 
@@ -170,11 +154,11 @@ The following features were configured:
 
 
 
-\- PowerShell Script Block Logging
+- PowerShell Script Block Logging
 
-\- PowerShell Module Logging
+- PowerShell Module Logging
 
-\- PowerShell Transcription
+- PowerShell Transcription
 
 
 
@@ -182,11 +166,11 @@ These settings provide detailed records of PowerShell execution, improving the a
 
 
 
-\---
+---
 
 
 
-\## 8. Policy Deployment
+## 8. Policy Deployment
 
 
 
@@ -202,19 +186,19 @@ Verification included:
 
 
 
-\- Updating Group Policy using `gpupdate /force`
+- Updating Group Policy using `gpupdate /force`
 
-\- Confirming policy application using `gpresult`
+- Confirming policy application using `gpresult`
 
-\- Reviewing configured settings through the Group Policy Management Console
-
-
-
-\---
+- Reviewing configured settings through the Group Policy Management Console
 
 
 
-\## 9. Outcome
+---
+
+
+
+## 9. Outcome
 
 
 
@@ -226,11 +210,11 @@ By enforcing password policies, account lockout settings, advanced auditing, and
 
 
 
-\---
+---
 
 
 
-\## 10. Next Phase
+## 10. Next Phase
 
 
 

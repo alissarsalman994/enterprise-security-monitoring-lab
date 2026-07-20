@@ -1,12 +1,12 @@
-\# 07 - Windows Security Monitoring
+# 07 - Windows Security Monitoring
 
 
 
-\---
+---
 
 
 
-\# 1. Overview
+# 1. Overview
 
 
 
@@ -18,11 +18,11 @@ The monitoring solution provides visibility into authentication activity, PowerS
 
 
 
-\---
+---
 
 
 
-\# 2. Objectives
+# 2. Objectives
 
 
 
@@ -30,25 +30,25 @@ The objectives of this implementation were to:
 
 
 
-\- Centralize Windows security telemetry.
+- Centralize Windows security telemetry.
 
-\- Monitor user authentication activity.
+- Monitor user authentication activity.
 
-\- Detect failed logon attempts.
+- Detect failed logon attempts.
 
-\- Monitor PowerShell activity.
+- Monitor PowerShell activity.
 
-\- Collect enhanced endpoint telemetry using Sysmon.
+- Collect enhanced endpoint telemetry using Sysmon.
 
-\- Visualize security events through Splunk dashboards.
-
-
-
-\---
+- Visualize security events through Splunk dashboards.
 
 
 
-\# 3. Windows Security Monitoring
+---
+
+
+
+# 3. Windows Security Monitoring
 
 
 
@@ -60,11 +60,11 @@ These events were forwarded to Splunk Enterprise, providing centralized visibili
 
 
 
-\---
+---
 
 
 
-\# 4. PowerShell Logging
+# 4. PowerShell Logging
 
 
 
@@ -76,11 +76,11 @@ Collecting these events allows administrators and security analysts to review ex
 
 
 
-\---
+---
 
 
 
-\# 5. Sysmon Monitoring
+# 5. Sysmon Monitoring
 
 
 
@@ -92,17 +92,17 @@ The configured deployment provides visibility into:
 
 
 
-\- Process creation
+- Process creation
 
-\- Network connections
+- Network connections
 
-\- Driver loading
+- Driver loading
 
-\- Image loading
+- Image loading
 
-\- File creation
+- File creation
 
-\- Registry activity
+- Registry activity
 
 
 
@@ -110,11 +110,11 @@ This additional telemetry strengthens endpoint monitoring and supports security 
 
 
 
-\---
+---
 
 
 
-\# 6. Security Events Collected
+# 6. Security Events Collected
 
 
 
@@ -123,28 +123,21 @@ The following event sources were monitored throughout the environment.
 
 
 | Event Source | Event IDs | Purpose |
-
 |--------------|-----------|---------|
-
 | Windows Security | 4624 | Successful user logons |
-
 | Windows Security | 4625 | Failed user logons |
-
 | Windows Security | 4688 | Process creation |
-
 | Windows PowerShell | 4103 | Module Logging |
-
 | Windows PowerShell | 4104 | Script Block Logging |
-
 | Sysmon | Multiple Event IDs | Enhanced endpoint telemetry |
 
 
 
-\---
+---
 
 
 
-\# 7. Detection Validation
+# 7. Detection Validation
 
 
 
@@ -156,21 +149,21 @@ Validation activities included:
 
 
 
-\- Successful user authentication.
+- Successful user authentication.
 
-\- Failed logon attempts.
+- Failed logon attempts.
 
-\- PowerShell command execution.
+- PowerShell command execution.
 
-\- Process creation events.
+- Process creation events.
 
-\- Verification of Windows Security events.
+- Verification of Windows Security events.
 
-\- Verification of Sysmon telemetry.
+- Verification of Sysmon telemetry.
 
-\- Verification of PowerShell logging.
+- Verification of PowerShell logging.
 
-\- Confirmation that all events were successfully received and indexed by Splunk Enterprise.
+- Confirmation that all events were successfully received and indexed by Splunk Enterprise.
 
 
 
@@ -178,11 +171,11 @@ The generated events were successfully collected and made available for searchin
 
 
 
-\---
+---
 
 
 
-\# 8. Dashboard Implementation
+# 8. Dashboard Implementation
 
 
 
@@ -194,19 +187,19 @@ The dashboard includes:
 
 
 
-\- Failed Logon Attempts
+- Failed Logon Attempts
 
-\- Failed Logons Over Time
+- Failed Logons Over Time
 
-\- Top Users with Failed Logons
+- Top Users with Failed Logons
 
-\- Top Source IP Addresses
+- Top Source IP Addresses
 
-\- PowerShell Activity
+- PowerShell Activity
 
-\- Recent PowerShell Commands
+- Recent PowerShell Commands
 
-\- Recent Security Events
+- Recent Security Events
 
 
 
@@ -214,11 +207,11 @@ Together with the \*\*Active Directory Security Monitoring\*\* dashboard describ
 
 
 
-\---
+---
 
 
 
-\# 9. Security Benefits
+# 9. Security Benefits
 
 
 
@@ -226,25 +219,25 @@ Implementing centralized Windows security monitoring provides several security b
 
 
 
-\- Early detection of authentication failures.
+- Early detection of authentication failures.
 
-\- Improved visibility into PowerShell activity.
+- Improved visibility into PowerShell activity.
 
-\- Enhanced endpoint telemetry through Sysmon.
+- Enhanced endpoint telemetry through Sysmon.
 
-\- Faster investigation of security events.
+- Faster investigation of security events.
 
-\- Centralized analysis using Splunk Enterprise.
+- Centralized analysis using Splunk Enterprise.
 
-\- Improved visibility across the Active Directory environment.
-
-
-
-\---
+- Improved visibility across the Active Directory environment.
 
 
 
-\# 10. Summary
+---
+
+
+
+# 10. Summary
 
 
 

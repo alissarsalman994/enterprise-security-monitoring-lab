@@ -1,12 +1,12 @@
-\# 06 - File Access Monitoring
+# 06 - File Access Monitoring
 
 
 
-\---
+---
 
 
 
-\# 1. Overview
+# 1. Overview
 
 
 
@@ -18,11 +18,11 @@ Windows Security Auditing was configured through Group Policy to generate detail
 
 
 
-\---
+---
 
 
 
-\# 2. Objectives
+# 2. Objectives
 
 
 
@@ -30,23 +30,23 @@ The objectives of this implementation were to:
 
 
 
-\- Create secure departmental file shares.
+- Create secure departmental file shares.
 
-\- Restrict access using the principle of least privilege.
+- Restrict access using the principle of least privilege.
 
-\- Monitor successful and failed file access attempts.
+- Monitor successful and failed file access attempts.
 
-\- Detect unauthorized access to sensitive departmental resources.
+- Detect unauthorized access to sensitive departmental resources.
 
-\- Visualize file access activity using Splunk dashboards.
-
-
-
-\---
+- Visualize file access activity using Splunk dashboards.
 
 
 
-\# 3. Department Shares
+---
+
+
+
+# 3. Department Shares
 
 
 
@@ -55,15 +55,10 @@ The following departmental shares were created on the Domain Controller.
 
 
 | Department | Security Group |
-
 |------------|----------------|
-
 | Finance | Finance |
-
 | Human Resources | HR |
-
 | Information Technology | IT\_Admins |
-
 | Sales | Sales |
 
 
@@ -72,11 +67,11 @@ Each department was granted access only to its designated folder.
 
 
 
-\---
+---
 
 
 
-\# 4. Access Control Implementation
+# 4. Access Control Implementation
 
 
 
@@ -84,7 +79,7 @@ Access to each departmental share was controlled using two permission layers.
 
 
 
-\## NTFS Permissions
+## NTFS Permissions
 
 
 
@@ -92,7 +87,7 @@ NTFS permissions were configured to ensure only authorized users could access de
 
 
 
-\## Share Permissions
+## Share Permissions
 
 
 
@@ -104,11 +99,11 @@ The combination of NTFS and Share permissions ensured users could only access re
 
 
 
-\---
+---
 
 
 
-\# 5. Windows Security Auditing
+# 5. Windows Security Auditing
 
 
 
@@ -124,11 +119,11 @@ This generated Windows Security events whenever users attempted to access protec
 
 
 
-\---
+---
 
 
 
-\# 6. Security Events Collected
+# 6. Security Events Collected
 
 
 
@@ -137,15 +132,10 @@ The following Windows Security Event IDs were monitored.
 
 
 | Event ID | Description |
-
 |----------|-------------|
-
 | 4656 | Handle requested to an object |
-
 | 4663 | Object accessed |
-
 | 5140 | Network share accessed |
-
 | 5145 | Detailed network share access |
 
 
@@ -154,11 +144,11 @@ These events were forwarded to Splunk Enterprise through the Splunk Universal Fo
 
 
 
-\---
+---
 
 
 
-\# 7. Detection Validation
+# 7. Detection Validation
 
 
 
@@ -170,17 +160,17 @@ Validation included:
 
 
 
-\- Authorized access to departmental folders.
+- Authorized access to departmental folders.
 
-\- Unauthorized access attempts.
+- Unauthorized access attempts.
 
-\- Successful file access.
+- Successful file access.
 
-\- Failed file access.
+- Failed file access.
 
-\- Verification of generated Windows Security events.
+- Verification of generated Windows Security events.
 
-\- Verification of log ingestion within Splunk Enterprise.
+- Verification of log ingestion within Splunk Enterprise.
 
 
 
@@ -188,11 +178,11 @@ All expected audit events were successfully generated and indexed.
 
 
 
-\---
+---
 
 
 
-\# 8. Dashboard Implementation
+# 8. Dashboard Implementation
 
 
 
@@ -204,15 +194,15 @@ The dashboard includes:
 
 
 
-\- Total Failed Access Attempts
+- Total Failed Access Attempts
 
-\- Successful Access Attempts
+- Successful Access Attempts
 
-\- Failed Access Attempts by Department
+- Failed Access Attempts by Department
 
-\- Top Users Triggering Failed Access
+- Top Users Triggering Failed Access
 
-\- Recent Failed Access Attempts
+- Recent Failed Access Attempts
 
 
 
@@ -220,11 +210,11 @@ These visualizations provide real-time visibility into user activity across depa
 
 
 
-\---
+---
 
 
 
-\# 9. Security Benefits
+# 9. Security Benefits
 
 
 
@@ -232,23 +222,23 @@ Implementing centralized file access monitoring provides several security benefi
 
 
 
-\- Visibility into user access to sensitive resources.
+- Visibility into user access to sensitive resources.
 
-\- Detection of unauthorized access attempts.
+- Detection of unauthorized access attempts.
 
-\- Support for incident investigation.
+- Support for incident investigation.
 
-\- Improved auditability of enterprise file systems.
+- Improved auditability of enterprise file systems.
 
-\- Centralized monitoring through Splunk Enterprise.
-
-
-
-\---
+- Centralized monitoring through Splunk Enterprise.
 
 
 
-\# 10. Summary
+---
+
+
+
+# 10. Summary
 
 
 

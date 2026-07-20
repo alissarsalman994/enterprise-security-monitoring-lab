@@ -1,8 +1,8 @@
-\# 04 - Splunk Enterprise Deployment
+# 04 - Splunk Enterprise Deployment
 
 
 
-\## 1. Objective
+## 1. Objective
 
 
 
@@ -10,37 +10,30 @@ To establish centralized security monitoring within the enterprise environment, 
 
 
 
-\---
+---
 
 
 
-\## 2. Technologies Used
+## 2. Technologies Used
 
 
 
 | Component | Technology |
-
 |---|---|
-
 | SIEM Platform | Splunk Enterprise 10.4.1 |
-
 | Operating System | Ubuntu Server 22.04 LTS |
-
 | Log Collection Agent | Splunk Universal Forwarder |
-
 | Monitored Endpoint | Windows 11 (WS01) |
-
 | Transport Protocol | TCP |
-
 | Receiving Port | 9997 |
 
 
 
-\---
+---
 
 
 
-\## 3. Splunk Enterprise Deployment
+## 3. Splunk Enterprise Deployment
 
 
 
@@ -56,11 +49,11 @@ This dedicated server serves as the centralized repository for security events g
 
 
 
-\---
+---
 
 
 
-\## 4. Universal Forwarder Deployment
+## 4. Universal Forwarder Deployment
 
 
 
@@ -73,11 +66,8 @@ The forwarder was configured using the following settings:
 
 
 | Setting | Value |
-
 |---|---|
-
 | Destination Server | 192.168.126.144 |
-
 | Receiving Port | 9997 |
 
 
@@ -86,11 +76,11 @@ After configuration, the Universal Forwarder service was started and verified to
 
 
 
-\---
+---
 
 
 
-\## 5. Log Collection Configuration
+## 5. Log Collection Configuration
 
 
 
@@ -98,15 +88,15 @@ The Universal Forwarder was configured to collect the following Windows Event Lo
 
 
 
-\- Windows Security
+- Windows Security
 
-\- Windows System
+- Windows System
 
-\- Windows Application
+- Windows Application
 
-\- Microsoft-Windows-PowerShell Operational
+- Microsoft-Windows-PowerShell Operational
 
-\- Microsoft-Windows-Sysmon Operational
+- Microsoft-Windows-Sysmon Operational
 
 
 
@@ -114,11 +104,11 @@ Collecting these logs provides visibility into authentication activity, operatin
 
 
 
-\---
+---
 
 
 
-\## 6. Verification
+## 6. Verification
 
 
 
@@ -126,17 +116,17 @@ The deployment was verified by confirming:
 
 
 
-\- Splunk Enterprise was running successfully on the Ubuntu server.
+- Splunk Enterprise was running successfully on the Ubuntu server.
 
-\- TCP port \*\*9997\*\* was configured to receive forwarded events.
+- TCP port \*\*9997\*\* was configured to receive forwarded events.
 
-\- The Universal Forwarder service was running on WS01.
+- The Universal Forwarder service was running on WS01.
 
-\- The Universal Forwarder established an active connection to the Splunk Enterprise server.
+- The Universal Forwarder established an active connection to the Splunk Enterprise server.
 
-\- Windows Event Logs were successfully indexed by Splunk.
+- Windows Event Logs were successfully indexed by Splunk.
 
-\- WS01 appeared as the event source within the Search \& Reporting application.
+- WS01 appeared as the event source within the Search \& Reporting application.
 
 
 
@@ -144,11 +134,11 @@ These verification steps confirmed successful communication between the monitore
 
 
 
-\---
+---
 
 
 
-\## 7. Outcome
+## 7. Outcome
 
 
 
@@ -164,11 +154,11 @@ This deployment establishes the foundation for centralized monitoring, detection
 
 
 
-\---
+---
 
 
 
-\## 8. Next Phase
+## 8. Next Phase
 
 
 
