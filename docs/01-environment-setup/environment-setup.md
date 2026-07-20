@@ -36,7 +36,7 @@ The NAT network provides isolated communication between all virtual machines whi
 | `DC01` | Windows Server 2016 | Active Directory Domain Controller | `192.168.126.10/24` | Static |
 | `WS01` | Windows 11 | Employee Workstation | `192.168.126.20/24` | Static |
 | `WS02` | Windows 11 | Employee Workstation | `192.168.126.21/24` | Static |
-| `kali` | Kali Linux | Attack Simulation Platform | `192.168.126.143/24` | DHCP |
+| `kali` | Kali Linux | Security Testing Workstation | `192.168.126.143/24` | DHCP |
 | `splunk` | Ubuntu Server 22.04 LTS | SIEM Server | `192.168.126.144/24` | DHCP |
 
 ---
@@ -65,7 +65,7 @@ The NAT network provides isolated communication between all virtual machines whi
 | `192.168.126.10` | DC01 | Active Directory & DNS |
 | `192.168.126.20` | WS01 | Domain Workstation |
 | `192.168.126.21` | WS02 | Domain Workstation |
-| `192.168.126.143` | Kali Linux | Attack Simulation |
+| `192.168.126.143` | Kali Linux | Future Security Testing & Attack Simulation |
 | `192.168.126.144` | Splunk Enterprise | Security Monitoring |
 
 ---
@@ -109,7 +109,7 @@ Static devices include:
 
 ## 7. Kali Linux
 
-Kali Linux is used as the authorized security testing platform throughout the project.
+Kali Linux is included in the lab environment as a dedicated security testing workstation. While the current project focuses on Windows security monitoring and detection, the system has been prepared to support future attack simulation and detection validation scenarios.
 
 | Setting | Value |
 |---|---|
@@ -118,8 +118,6 @@ Kali Linux is used as the authorized security testing platform throughout the pr
 | IP Address | `192.168.126.143/24` |
 | Addressing | DHCP |
 | Network Mode | VMware NAT |
-
-The system remains outside the Active Directory domain and is used to simulate controlled attack scenarios including reconnaissance, authentication attacks, remote administration attempts, and lateral movement.
 
 ---
 
