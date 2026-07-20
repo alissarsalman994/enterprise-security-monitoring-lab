@@ -1,8 +1,8 @@
-\# 02 - Active Directory Deployment
+# 02 - Active Directory Deployment
 
 
 
-\## 1. Objective
+## 1. Objective
 
 
 
@@ -14,11 +14,11 @@ The Active Directory environment forms the foundation of the enterprise network 
 
 
 
-\---
+---
 
 
 
-\## 2. Technologies Used
+## 2. Technologies Used
 
 
 
@@ -40,11 +40,11 @@ The Active Directory environment forms the foundation of the enterprise network 
 
 
 
-\---
+---
 
 
 
-\## 3. Domain Configuration
+## 3. Domain Configuration
 
 
 
@@ -70,11 +70,11 @@ The Domain Controller hosts both Active Directory Domain Services and the integr
 
 
 
-\---
+---
 
 
 
-\## 4. Organisational Unit Structure
+## 4. Organisational Unit Structure
 
 
 
@@ -82,37 +82,37 @@ To simulate a realistic enterprise environment, dedicated Organizational Units (
 
 
 
-\### Business Units
+### Business Units
 
 
 
-\- Executive
+- Executive
 
-\- Finance
+- Finance
 
-\- Human Resources
+- Human Resources
 
-\- Information Technology
+- Information Technology
 
-\- Marketing
+- Marketing
 
-\- Operations
+- Operations
 
-\- Sales
-
-
-
-\### Infrastructure Units
+- Sales
 
 
 
-\- Servers
+### Infrastructure Units
 
-\- Workstations
 
-\- Groups
 
-\- Service Accounts
+- Servers
+
+- Workstations
+
+- Groups
+
+- Service Accounts
 
 
 
@@ -120,11 +120,11 @@ This structure provides logical separation of users and computer objects while s
 
 
 
-\---
+---
 
 
 
-\## 5. User and Computer Management
+## 5. User and Computer Management
 
 
 
@@ -152,11 +152,11 @@ This allows centralized authentication, policy management, and administrative co
 
 
 
-\---
+---
 
 
 
-\## 6. Domain Services
+## 6. Domain Services
 
 
 
@@ -164,21 +164,21 @@ The Active Directory deployment provides the following services throughout the e
 
 
 
-\- Centralized authentication
+- Centralized authentication
 
-\- Centralized authorization
+- Centralized authorization
 
-\- Integrated DNS
+- Integrated DNS
 
-\- Computer account management
+- Computer account management
 
-\- User account management
+- User account management
 
-\- Security group management
+- Security group management
 
-\- Organizational Unit administration
+- Organizational Unit administration
 
-\- Group Policy support
+- Group Policy support
 
 
 
@@ -186,11 +186,11 @@ These services form the foundation for the security controls implemented later i
 
 
 
-\---
+---
 
 
 
-\## 7. Verification
+## 7. Verification
 
 
 
@@ -198,19 +198,19 @@ The Active Directory deployment was verified by confirming:
 
 
 
-\- Successful promotion of DC01 to Domain Controller
+- Successful promotion of DC01 to Domain Controller
 
-\- Successful creation of the corp.northbridge.com domain
+- Successful creation of the corp.northbridge.com domain
 
-\- DNS resolution through DC01
+- DNS resolution through DC01
 
-\- Successful domain join of WS01
+- Successful domain join of WS01
 
-\- Successful domain join of WS02
+- Successful domain join of WS02
 
-\- Computer objects appearing in the Workstations OU
+- Computer objects appearing in the Workstations OU
 
-\- User authentication using domain credentials
+- User authentication using domain credentials
 
 
 
@@ -222,23 +222,23 @@ screenshots/active-directory/
 
 
 
-\---
+---
 
 
 
-\## 8. Outcome
+## 8. Outcome
 
 
 
-A fully functional Active Directory environment was successfully deployed to simulate a small enterprise network. The completed domain infrastructure provides centralized identity management and serves as the foundation for Group Policy, endpoint monitoring, SIEM integration, and future attack simulations throughout the remainder of the project.
+A fully functional Active Directory environment was successfully deployed to simulate a small enterprise network. The completed domain infrastructure provides centralized identity management and serves as the foundation for Group Policy, endpoint monitoring, SIEM integration, and future security testing and detection validation as the project continues to evolve.
 
 
 
-\---
+---
 
 
 
-\## 9. Next Phase
+## 9. Next Phase
 
 
 
