@@ -20,7 +20,9 @@ The objective is to build a realistic corporate network, deploy centralized secu
 
 ## Project Status
 
-🚧 Currently building the lab environment.
+✅ Completed
+
+The lab environment has been successfully implemented. The remaining tasks involve organizing documentation, screenshots, and repository presentation.
 
 ## Planned Project Phases
 
