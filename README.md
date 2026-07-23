@@ -1,43 +1,68 @@
-# Enterprise Security Monitoring & Incident Response Lab
+# Enterprise Security Monitoring Lab
 
-## Overview
+A Windows-based security monitoring lab built using Active Directory, Group Policy, Sysmon, Windows Security Auditing, and Splunk Enterprise to simulate centralized monitoring within a small enterprise environment.
 
-This project documents the design, implementation, monitoring, and security assessment of a simulated enterprise Active Directory environment.
-
-The objective is to build a realistic corporate network, deploy centralized security monitoring, simulate common attack techniques, detect malicious activity, investigate incidents, and implement security improvements.
-
-## Technologies
-
-- Active Directory Domain Services
-- Windows Server
-- Windows 11
-- Ubuntu Server
-- Kali Linux
-- Sysmon
-- Splunk Enterprise
-- VMware Workstation
-- MITRE ATT&CK
-
-## Project Status
-
-✅ Completed
-
-The lab environment has been successfully implemented. The remaining tasks involve organizing documentation, screenshots, and repository presentation.
-
-## Planned Project Phases
-
-- [x] Build Active Directory environment
-- [x] Create users, groups and organizational units
-- [x] Join workstations to the domain
-- [x] Install Sysmon
-- [x] Deploy Splunk Enterprise
-- [x] Configure centralized logging
-- [x] Harden the environment using Group Policy
-- [x] Build detection rules and dashboards
-- [x] Validate detections through simulated activity
-- [x] Investigate security events using Splunk
-- [ ] Publish documentation and final security assessment
+The project demonstrates how Windows endpoints can be monitored through centralized log collection, endpoint telemetry, and Active Directory security controls while providing visibility into authentication activity, PowerShell execution, process creation, and access to departmental file shares.
 
 ---
 
-> This repository is being updated throughout the project to document every stage of the enterprise security assessment.
+# Lab Architecture
+
+The following diagram illustrates the complete lab architecture, including the VMware network, Active Directory environment, Windows endpoints, Splunk Enterprise SIEM, log collection workflow, and file access monitoring process.
+
+![Lab Architecture](docs/01-environment-setup/Diagrams/LabArchitecture_LogFlow_Diagram.png)
+
+---
+
+# Technologies Used
+
+| Category | Technologies |
+|----------|--------------|
+| Operating Systems | Windows Server 2016, Windows 11 Pro, Ubuntu Server 22.04, Kali Linux |
+| Identity Management | Active Directory Domain Services |
+| Security Monitoring | Splunk Enterprise, Splunk Universal Forwarder |
+| Endpoint Telemetry | Sysmon |
+| Windows Logging | Windows Security Auditing, PowerShell Logging |
+| Administration | Group Policy, DNS, NTFS Permissions, Share Permissions |
+| Virtualization | VMware Workstation |
+| Documentation | Markdown |
+
+---
+
+# Key Components
+
+- Active Directory Domain Services (AD DS)
+- Organizational Units (OUs)
+- Group Policy Objects (GPOs)
+- Departmental File Shares
+- NTFS & Share Permissions
+- Windows Security Auditing
+- PowerShell Logging
+- Sysmon Endpoint Monitoring
+- Splunk Universal Forwarders
+- Splunk Enterprise SIEM
+- Centralized Log Collection
+- Windows Security Monitoring
+- MITRE ATT&CK Mapping
+
+---
+
+# Splunk Dashboards
+
+The project includes custom Splunk dashboards that provide centralized visibility into Active Directory authentication events and Windows security activity.
+
+## Active Directory Security Monitoring
+
+![Active Directory Security Monitoring](docs/04-siem-deployment-log-ingestion/splunk-dashboards/Active%20Directory%20Security%20Monitoring.png)
+
+## Windows Security Monitoring
+
+![Windows Security Monitoring](docs/04-siem-deployment-log-ingestion/splunk-dashboards/Windows%20Security%20Monitoring.png)
+
+---
+
+# Project Status
+
+**Status:** ✅ Completed
+
+This project successfully demonstrates the deployment of a Windows enterprise security monitoring environment using Active Directory, Group Policy, Sysmon, Windows Security Auditing, and Splunk Enterprise. It includes centralized log collection, endpoint monitoring, file access auditing, security event analysis, MITRE ATT&CK mapping, and comprehensive technical documentation covering the complete implementation process.
