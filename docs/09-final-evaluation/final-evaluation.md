@@ -1,20 +1,12 @@
 # 09 - Project Summary and Evaluation
 
-## Purpose
+# Executive Summary
 
-This document provides a summary and evaluation of the completed Active Directory detection lab following the successful implementation and validation of the configured security controls.
+This project documents the implementation of a Windows-based enterprise security monitoring environment using Active Directory, Group Policy, Sysmon, Windows Security Auditing, PowerShell logging, and Splunk Enterprise. The lab simulates a small enterprise network where centralized logging, endpoint monitoring, and access controls are used to monitor authentication activity, process execution, PowerShell usage, and access to shared resources.
 
-The purpose is to review the completed environment, evaluate the implemented monitoring capabilities, highlight the project's strengths, acknowledge its current limitations, and identify potential enhancements for future development.
+Windows endpoints were configured to generate security telemetry that was forwarded to Splunk using Universal Forwarders for centralized collection and analysis. Additional controls, including Active Directory security groups, NTFS permissions, and Share Permissions, were implemented to secure departmental network shares and monitor both authorized and unauthorized access attempts.
 
----
-
-# Project Overview
-
-The completed environment simulates a small enterprise Active Directory network consisting of a Windows Server 2016 Domain Controller, multiple Windows 11 domain-joined workstations, a Ubuntu server running Splunk Enterprise, and departmental network shares secured through Active Directory groups and NTFS permissions.
-
-Centralized logging was implemented using Splunk Universal Forwarders installed on the Windows systems. Windows Security Auditing, PowerShell logging, and Sysmon telemetry were successfully collected and forwarded to Splunk for monitoring and analysis.
-
-The environment demonstrates how common Windows administrative activity can be monitored through a Security Information and Event Management (SIEM) platform while maintaining visibility across multiple systems.
+The project also includes documentation covering the environment configuration, implemented security controls, detection capabilities, Windows event monitoring, file access auditing, and mapping of validated detections to the MITRE ATT&CK framework.
 
 ---
 
@@ -45,7 +37,7 @@ Each control was configured, validated, and documented throughout the project.
 
 # Detection Capabilities
 
-The completed environment provides visibility into several common Windows activities through centralised logging.
+The completed environment provides visibility into several common Windows activities through centralized logging.
 
 The validated monitoring capabilities include:
 
@@ -60,7 +52,7 @@ The validated monitoring capabilities include:
 - File access activity
 - User account management events
 
-These events provide sufficient visibility to support basic security investigations and demonstrate how endpoint telemetry can be centralised within Splunk.
+These events provide sufficient visibility to support basic security investigations and demonstrate how endpoint telemetry can be centralized within Splunk.
 
 ---
 
@@ -106,7 +98,7 @@ The completed environment demonstrates several enterprise security concepts with
 
 Key strengths include:
 
-- Centralised log collection through Splunk
+- Centralized log collection through Splunk
 - Active Directory domain administration
 - Endpoint monitoring using Sysmon
 - Windows native security auditing
@@ -163,7 +155,7 @@ These enhancements would increase monitoring coverage, improve detection capabil
 
 The project successfully demonstrates the implementation of a Windows-based security monitoring environment using Active Directory, Group Policy, Sysmon, Windows Security Auditing, PowerShell logging, and Splunk Enterprise.
 
-The completed environment provides centralised visibility into authentication activity, process execution, PowerShell usage, network share access, file access, and endpoint telemetry across multiple Windows systems.
+The completed environment provides centralized visibility into authentication activity, process execution, PowerShell usage, network share access, file access, and endpoint telemetry across multiple Windows systems.
 
 Throughout the project, enterprise security concepts including identity management, access control, endpoint monitoring, log management, and security event analysis were implemented, validated, and documented.
 
